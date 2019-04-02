@@ -122,6 +122,7 @@ export class TodoListComponent implements OnInit {
 			return this.todos.filter(todo => todo.completed);
 		}
 
+		
 		return this.todos;
 	}
 }
