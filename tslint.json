@@ -1,5 +1,10 @@
 {
-  "extends": "tslint:recommended",
+	"extends": "tslint:recommended",
+	"indent": [
+		true,
+		"tabs",
+		4
+	],
   "rulesDirectory": [
     "codelyzer"
   ],
@@ -12,7 +17,8 @@
     "import-blacklist": [
       true,
       "rxjs/Rx"
-    ],
+		],
+		
     "interface-name": false,
     "max-classes-per-file": false,
     "max-line-length": [
