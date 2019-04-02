@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../../interface/todo';
-import { trigger, transition, style, animate } from '@angular/animations'
+import { trigger, transition, style, animate } from '@angular/animations';
 @Component({
 	// tslint:disable-next-line: component-selector
 	selector: 'todo-list',
@@ -23,7 +23,7 @@ import { trigger, transition, style, animate } from '@angular/animations'
 	]
 })
 export class TodoListComponent implements OnInit {
-	public todos: object[];
+	public todos: Todo[];
 	todoTitle: string;
 	idForTodo: number;
 	beforeEditCache: string;
@@ -57,7 +57,7 @@ export class TodoListComponent implements OnInit {
 				completed: false,
 				editing: false,
 			}
-		]
+		];
 	}
 
 	addTodo(): void {
@@ -69,7 +69,7 @@ export class TodoListComponent implements OnInit {
 			title: this.todoTitle,
 			completed: false,
 			editing: false,
-		})
+		});
 
 		this.todoTitle = '';
 		this.idForTodo++;
@@ -119,7 +119,7 @@ export class TodoListComponent implements OnInit {
 		} else if (this.filter === 'active') {
 			return this.todos.filter(todo => !todo.completed);
 		} else if (this.filter === 'completed') {
-			return this.todos.filter(todo => todo.completed)
+			return this.todos.filter(todo => todo.completed);
 		}
 
 		return this.todos;
